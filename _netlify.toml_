@@ -1,0 +1,8 @@
+[build]
+  functions = "netlify/functions"
+  publish = "" # You can create a 'public' folder or leave it empty
+
+[[redirects]]
+  from = "/*"
+  to = "/.netlify/functions/app"
+  status = 200
