@@ -1,6 +1,6 @@
  const mongoose = require('mongoose');
 
- mongoose.connect("mongodb://127.0.0.1:27017/dashboarddb");
+ mongoose.connect("mongodb+srv://garimagarg112:Garimagarg@123@cluster0.3r0qbab.mongodb.net/");
  
 
  const Userschema = new mongoose.Schema({
