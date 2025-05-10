@@ -14,7 +14,7 @@ require('dotenv').config();
 const app = express();
 const PORT = 5002;
 
-mongoose.connect("mongodb://127.0.0.1:27017/dashboarddb")
+mongoose.connect("mongodb+srv://garimagarg112:Garimagarg@123@cluster0.3r0qbab.mongodb.net/git init")
   .then(() => console.log("MongoDB Connected"))
   .catch(err => console.error("MongoDB connection error:", err));
 

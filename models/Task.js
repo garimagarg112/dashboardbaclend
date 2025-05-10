@@ -1,6 +1,6 @@
  const mongoose = require('mongoose');
 
- mongoose.connect("mongodb+srv://garimagarg112:Garimagarg@123@cluster0.3r0qbab.mongodb.net/");
+ mongoose.connect("mongodb+srv://garimagarg112:Garimagarg@123@cluster0.3r0qbab.mongodb.net/git init");
  
  const { Schema } = mongoose;
  const { ObjectId } = mongoose;
