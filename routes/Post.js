@@ -39,8 +39,8 @@ router.get("/getallpostId/:id", postvw_controller.getallpostId);
 
 router.get("/getpostByuserId/:id", postvw_controller.getpostByuserId);  
 
-router.post("/savePost", upload.single('image'), postvw_controller.savePost);
+// router.post("/savePost", upload.single('image'), postvw_controller.savePost);
 
-router.post("/editPost", upload.single('image'), postvw_controller.editPost);
+// router.post("/editPost", upload.single('image'), postvw_controller.editPost);
 
 module.exports = router;
