@@ -9,7 +9,7 @@ const router = express.Router();
 const postvw_controller = require("../controllers/Post");
 
 //const upload = require("../middleware/upload"); // path to your multer config
-const multer  = require('multer')
+
 
 const storage = multer.diskStorage({
   destination: function(req, file, cb) {
