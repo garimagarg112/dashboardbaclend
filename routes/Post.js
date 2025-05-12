@@ -1,6 +1,7 @@
 const express = require("express");
 
 const path = require('path');
+const multer  = require('multer')
 
 
 const router = express.Router();
@@ -22,6 +23,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage })
 
+
 router.get("/getawholepost", postvw_controller.getawholepost);
 
 router.get("/getpostDashboard", postvw_controller.getpostDashboard);
@@ -36,7 +38,8 @@ router.get("/getallpostId/:id", postvw_controller.getallpostId);
 
 router.get("/getpostByuserId/:id", postvw_controller.getpostByuserId);  
 
-router.post("/savePost", upload.single('image'), postvw_controller.savePost);
+
+ router.post("/savePost", upload.single('image'), postvw_controller.savePost);
 
 router.post("/editPost", upload.single('image'), postvw_controller.editPost);
 

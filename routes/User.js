@@ -1,14 +1,10 @@
 const express = require("express");
 
 const path = require('path');
-
+const multer  = require('multer')
 
 const router = express.Router();
 
-
-const user_controller = require("../controllers/LoginBack");
-
-const multer  = require('multer')
 
 const storage = multer.diskStorage({
   destination: function(req, file, cb) {
@@ -22,7 +18,11 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage })
 
-router.post("/", user_controller.index);
+const user_controller = require("../controllers/LoginBack");
+
+
+
+router.get("/", user_controller.index);
 
 router.post("/getloginuser", user_controller.getloginuser);
 
