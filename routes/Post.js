@@ -7,8 +7,20 @@ const router = express.Router();
 
 const postvw_controller = require("../controllers/Post");
 
-const upload = require("../middleware/upload"); // path to your multer config
+//const upload = require("../middleware/upload"); // path to your multer config
+const multer  = require('multer')
 
+const storage = multer.diskStorage({
+  destination: function(req, file, cb) {
+      cb(null, './Uploadimage');
+  },
+  filename: function (req, file, cb) {
+      //console.log(file.originalname);
+      cb(null , file.originalname );
+  }
+});
+
+const upload = multer({ storage: storage })
 
 router.get("/getawholepost", postvw_controller.getawholepost);
 

@@ -8,7 +8,19 @@ const router = express.Router();
 
 const user_controller = require("../controllers/LoginBack");
 
-const upload = require("../middleware/upload"); 
+const multer  = require('multer')
+
+const storage = multer.diskStorage({
+  destination: function(req, file, cb) {
+      cb(null, './Uploadimage');
+  },
+  filename: function (req, file, cb) {
+      //console.log(file.originalname);
+      cb(null , file.originalname );
+  }
+});
+
+const upload = multer({ storage: storage })
 
 router.post("/", user_controller.index);
 
