@@ -22,7 +22,7 @@ const user_controller = require("../controllers/LoginBack");
 
 // const upload = require("../middleware/upload"); 
 
-router.post("/users", user_controller.index);
+router.get("/", user_controller.index);
 
 router.post("/getloginuser", user_controller.getloginuser);
 
