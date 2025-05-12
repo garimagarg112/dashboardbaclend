@@ -8,7 +8,7 @@ const router = express.Router();
 
 const postvw_controller = require("../controllers/Post");
 
-const express = require("express");
+
 
 
 
