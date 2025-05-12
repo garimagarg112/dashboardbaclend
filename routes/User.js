@@ -36,6 +36,8 @@ router.get("/getAlluser", user_controller.getAlluser);
 
 router.get("/getuserById/:id", user_controller.getuserById);
 
+
+
 router.get("/gettoken/:token", user_controller.gettoken);
 
 module.exports = router;
