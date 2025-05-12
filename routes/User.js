@@ -28,7 +28,7 @@ router.post("/getloginuser", user_controller.getloginuser);
 
 router.post("/getuser", user_controller.getuser);
 
-router.post("/saveUser", upload.single('image'), user_controller.saveUser);
+// router.post("/saveUser", upload.single('image'), user_controller.saveUser);
 
 router.post("/updateUser", upload.single('image'), user_controller.updateUser);
 
