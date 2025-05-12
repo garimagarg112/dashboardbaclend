@@ -8,7 +8,7 @@ const router = express.Router();
 
 const user_controller = require("../controllers/LoginBack");
 
-const upload = require("../middleware/upload"); 
+// const upload = require("../middleware/upload"); 
 
 router.post("/users", user_controller.index);
 
